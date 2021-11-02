@@ -16,7 +16,7 @@ source:
     - 0001-Implement-mempcpy-via-memcpy.patch  # [osx]
 
 build:
-  number: 5
+  number: 6
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
   skip: true  # [win]
 
