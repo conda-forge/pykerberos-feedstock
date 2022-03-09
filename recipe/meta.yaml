@@ -1,13 +1,13 @@
 {% set name = "pykerberos" %}
-{% set version = "1.2.1" %}
+{% set version = "1.2.4" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 4f2dca8df5f84a3be039c026893850d731a8bb38395292e1610ffb0a08ba876c
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 9d701ebd8fc596c99d3155d5ba45813bd5908d26ef83ba0add250edb622abed4
   patches:
     # fix issue with memcpy on macOS
     # LICENSE: this patch is reproduced from the AnacondaRecipes/aggregate
@@ -16,8 +16,8 @@ source:
     - 0001-Implement-mempcpy-via-memcpy.patch  # [osx]
 
 build:
-  number: 6
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  number: 0
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
   skip: true  # [win]
 
 requirements:
@@ -39,13 +39,13 @@ test:
     - kerberos
 
 about:
-  home: "https://github.com/02strich/pykerberos"
-  dev_url: "https://github.com/02strich/pykerberos"
-  doc_url: "https://pypi.python.org/pypi/kerberos"
-  license: "Apache-2.0"
-  license_family: "APACHE"
-  license_file: "LICENSE"
-  summary: "High-level interface to Kerberos"
+  home: https://github.com/02strich/pykerberos
+  dev_url: https://github.com/02strich/pykerberos
+  doc_url: https://pypi.python.org/pypi/kerberos
+  license: Apache-2.0
+  license_family: APACHE
+  license_file: LICENSE
+  summary: High-level interface to Kerberos
   description: |
     pykerberos is a high-level wrapper for Kerberos (GSSAPI) operations. The
     goal is to avoid having to build a module that wraps the entire
