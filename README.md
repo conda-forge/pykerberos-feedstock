@@ -1,11 +1,11 @@
-About pykerberos
-================
+About pykerberos-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pykerberos-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/02strich/pykerberos
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pykerberos-feedstock/blob/main/LICENSE.txt)
 
 Summary: High-level interface to Kerberos
 
