@@ -19,7 +19,7 @@ source:
       then: 0001-Implement-mempcpy-via-memcpy.patch
 
 build:
-  number: 9
+  number: 10
   script: ${{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv
   skip: win
 
